@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice_4</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <form>
+            <label for="lastname">Nom : </label><input type="text" name="lastname" id="lastname"/>
+            <label for="firstname">Prénom : </label><input type="text" name="firstname" id="firstname"/>
+            <label for="city">Ville : </label><input type="text" name="city" id="city"/>
+            <input type="button" name="submit" id="submit" onclick="getSee()" value="Valider" />
+        </form>
+        <script>
+          function getSee () {
+            var lastName = document.getElementById('lastname').value;
+            var firstName = document.getElementById('firstname').value;
+            var city = document.getElementById('city').value;
+
+            if (isNaN(lastName)==true && isNaN(firstName)==true && isNaN(city)==true) {
+              alert("Nom : "+lastName+"\nPrénom : "+firstName+"\nVille : "+city);
+            }else{
+              alert("Vous devez rentrez une chaine de caractère");
+            }
+                      }
+        </script>
+
+    </body>
+</html>
